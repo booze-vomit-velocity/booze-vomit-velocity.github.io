@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>リダイレクトページ</title>
+    <script>
+        // 5秒後に指定したURLにリダイレクト
+        setTimeout(function() {
+            window.location.href = "index.html"; // リダイレクト先のURLを設定
+        }, 5000); // 5000ミリ秒（5秒）後にリダイレクト
+    </script>
+        <style>
+    h1 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+body {
+  background-image: url(main.jpg);
+  background-size: cover;
+}
+body:before {
+  content: "";
+  background: inherit; /*.bgImageで設定した背景画像を継承する*/
+  filter: blur(5px);
+  position: absolute;
+  /*ブラー効果で画像の端がボヤけた分だけ位置を調整*/
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1; /*重なり順序を一番下にしておく*/
+}
+</style>
+</head>
+<body>
+    <h1>送信が完了しました。</h1>
+    <p>本日はありがとうございました。<br>
+    お気をつけてお帰りください。</p>
+</body>
+</html>
