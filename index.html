@@ -54,9 +54,23 @@ button:nth-of-type(1) {
   </div>
 
    <script type="text/javascript">
-window.onload = function{
-  window.scrollTo(0,1);
-};
+if (0 === window.pageYOffset) {
+    setTimeout(function () {
+        var elem_body = document.getElementsByTagName('body')[0];
+
+        elem_body.style.minHeight = '1000px';
+
+        setTimeout(function () {
+            window.scrollTo(0, 1);
+
+            setTimeout(function () {
+                elem_body.style.minHeight = window.innerHeight + 'px';
+            }, 500);
+
+        }, 500);
+
+    }, 500);
+}
 </script>
   
 </body>
