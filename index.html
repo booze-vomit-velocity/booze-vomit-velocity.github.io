@@ -16,15 +16,14 @@
 
     body:before{
 	content: '';
-  	background: inherit;/*.bgImageで設定した背景画像を継承する*/
+  	background: inherit;
   	filter: blur(5px);
-  	position: absolute;
-  /*ブラー効果で画像の端がボヤけた分だけ位置を調整*/
+  	position: fixed;
   	top: -5px;
   	left: -5px;
  	right: -5px;
   	bottom: -5px;
-  	z-index: -1;/*重なり順序を一番下にしておく*/
+  	z-index: -1;
   }
 h1 {
     width: 60%;
